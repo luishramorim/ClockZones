@@ -44,18 +44,17 @@ struct SearchTimezoneView: View {
             // Place the search field in the navigation view.
             .searchable(text: $searchText)
             .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
+                ToolbarItem(placement: .navigationBarLeading, content: {
                     Button("Close") {
                         dismiss()
                     }
-                }
+                })
             }
             .onAppear(perform: loadJSON)
             // Filter the JSON whenever the search text changes.
-            .onChange(of: searchText) {
+            .onChange(of: searchText) { _ in
                 filterJSON()
             }
-            
         }
     }
     

@@ -58,6 +58,7 @@ Run the tests by selecting the `ClockZonesTests` scheme in Xcode.
 
   </tr>
 </table>
+
 ## License
 
 This project is licensed under the MIT License.
